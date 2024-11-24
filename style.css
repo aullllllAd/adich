@@ -1,0 +1,185 @@
+
+/* Gaya untuk Kop Surat */
+.letterhead {
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ini penting untuk membuat elemen bergeser ke bawah pada layar kecil */
+}
+
+.logo {
+    max-width: 100px; /* Ukuran logo */
+    height: auto;
+}
+
+.header-text {
+    text-align: right;
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    color: #4b2e2a;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.paper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+/* Container utama untuk gambar dan teks */
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Memberikan jarak antara gambar dan teks */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Gambar */
+.carousel {
+    position: relative;
+    max-width: 300px; /* Ukuran maksimal gambar */
+    flex-shrink: 0; /* Menghindari gambar menyusut */
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden; /* Menyembunyikan gambar yang tidak aktif */
+}
+
+.carousel-item {
+    width: 100%;
+    display: none; /* Menyembunyikan gambar kecuali yang aktif */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-item.active {
+    display: block; /* Menampilkan gambar yang aktif */
+}
+
+/* Konten Teks */
+.text-content {
+    flex: 1; /* Agar teks mengisi ruang yang tersisa */
+}
+
+/* Styling untuk nomor halaman */
+.page-number {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Menyesuaikan ukuran gambar */
+.side-image {
+    max-width: 150px; /* Batas lebar gambar */
+    height: auto;
+    border-radius: 8px; /* Membuat sudut gambar sedikit melengkung */
+}
+
+/* Gaya teks */
+.text-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Memberikan jarak antara konten dan nomor halaman */
+}
+
+/* Menata nomor halaman */
+.page-number {
+    text-align: right; /* Memusatkan nomor halaman */
+    font-size: 0.9em; /* Ukuran font yang lebih besar */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    margin-top: 20px; /* Memberikan jarak atas */
+    color: #333; /* Warna teks */
+    margin-right: 0; /* Menghapus margin kanan default jika ada */
+}
+
+/* Mengatur gambar di kiri dan kanan */
+.side-image.left {
+    order: 1; /* Menempatkan gambar di kiri untuk halaman 1 */
+}
+
+.side-image.right {
+    order: 2; /* Menempatkan gambar di kanan untuk halaman 2 */
+}
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Menampilkan elemen dalam satu kolom */
+        align-items: center;    /* Elemen akan berada di tengah layar */
+    }
+
+    .header-text {
+        text-align: center;     /* Menjadikan teks di tengah */
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;      /* Ukuran font yang lebih kecil untuk perangkat kecil */
+    }
+
+    .logo {
+        max-width: 80px;        /* Logo lebih kecil di layar kecil */
+    }
+    .content {
+        flex-direction: column; /* Mengubah menjadi kolom pada layar kecil */
+        align-items: center; /* Pusatkan gambar dan teks */
+    }
+
+    .side-image {
+        max-width: 100%; /* Membuat gambar menyesuaikan lebar kontainer */
+    }
+
+    .text-content {
+        text-align: center; /* Pusatkan teks pada layar kecil */
+    }
+}
+button {
+    background-color: #4CAF50; /* Warna latar hijau */
+    color: white; /* Warna teks */
+    padding: 12px 20px; /* Ruang di dalam tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 8px; /* Membuat sudut melengkung */
+    font-size: 16px; /* Ukuran teks */
+    font-weight: bold; /* Membuat teks tebal */
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat di-hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+    transition: transform 0.2s, background-color 0.3s; /* Animasi saat tombol ditekan */
+}
+
+button:hover {
+    background-color: #45a049; /* Warna latar sedikit lebih gelap saat di-hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Mengecilkan sedikit tombol saat ditekan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Mengurangi bayangan */
+}
+
+
